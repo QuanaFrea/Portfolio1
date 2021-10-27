@@ -1,0 +1,66 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/footer.ejs %>
+
+<!--Content for edit page-->
+<!DOCTYPE html>
+<html>
+  <!-- head content -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <main>
+    <h1>
+      Edit Info
+    </h1>
+    
+      <!-- fieldset for viewer contact info -->
+      <fieldset>
+        <form class="form"  method="POST">
+          <table cellpadding="15" cellspacing="5" width="65%">
+            <!-- first Row -->
+            <tr>
+              <td>
+              <label><b>Name: </b></label><br/>
+              <input type="text" name="name" id="nameTextField" size="40" value="<%= business.name %>" required> </input>
+              </td>
+            </tr>
+            <!-- second Row -->
+            <tr>
+              <td>
+              <label><b>Email: </b></label><br/>
+              <input type="text" name="email" id="emailTextField" size="40" value="<%= business.email %>" required> </input>
+              </td>
+            </tr>
+            <!-- third Row -->
+            
+            <!-- fifth Row -->
+            <tr>
+              <td>
+              <label><b>Number: </b></label><br/>
+              <input type="number" name="number" id="numberTextField" size="40" value="<%= business.number %>" required> </input>
+              </td>
+            </tr>
+            <!-- sixth Row -->
+            <tr>
+              <td>
+                 <button class="button" type="submit">
+                    Submit
+                 </button>
+
+                 <a href="/business-list" class="button">
+                    Cancel
+                  </a>
+
+                  <button>
+                    <a href="/business-list/delete/<%= business._id %>" class="button">Delete</a>
+                  </button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </fieldset>
+  </main>
+  <script src="/javascripts/extrascript.js"></script>
+</html>

@@ -1,0 +1,52 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/footer.ejs %>
+
+
+<!DOCTYPE html>
+<html>
+  <!-- head content -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <main>
+    <h1>
+      Login Page
+    </h1>
+
+    <!--Message Area-->
+    <%if(messages.length > 0) {%>
+        <div class="">
+            <%= messages %>
+        </div>
+    <% } %>
+
+    <fieldset>
+        <form name="\" id="" method="POST" autocomplete="off">
+            <fieldset>
+                <label for="username">Username:</label>
+                <input type="text" class="" name="username" id="username" placeholder="Enter username" required autofocus> 
+                <br/>
+                <br/>
+                <label for="password">Password:</label>
+                <input type="text" class="" name="password" id="password" placeholder="enter password" required autofocus>
+                <br/>
+                <br/>
+                <br/>
+                <li>Or
+                    <br/>
+                    <a href="/register">Register Here</a>
+                </li>
+            </fieldset>
+            <fieldset>
+                <input type="submit" class="button" value="Login">
+                <a href="/">
+                    <input type="text" class="button" value="Cancel">
+                </a>
+            </fieldset>
+        </form>
+    </fieldset>
+  </main>
+</html>

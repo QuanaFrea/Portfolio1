@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title %></title>
+        <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css"> -->
+        <link rel='stylesheet' href='/stylesheets/style.css' /> 
+      </head>
+      <!-- navigation bar -->
+      <header>
+        <ul>
+          <li><a><img src="/assets/images/logo1.jpg" alt="logo" style="width: 60px;"></a></li>
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <!-- <li><a href="/business-list">Books</a></li> -->
+
+          <div class="dropup">
+            <button class="dropbtn">Business</button>
+            <div class="dropup-content">
+              <a href="/business-list">Business Contacts List</a>
+              <a href="/business-list/add">Update the List</a>
+            </div>
+          </div>
+
+          <!-- <li><a href="/business-list/add">Add a Book</a></li> -->
+
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <li><a>Welcome, <%= displayName %></a></li>
+            <li><a href="/logout">  ||  Logout  ||  </a></li>
+          <% } else {%>
+            <li><a href="/login">  ||  Login  ||  </a></li>
+          <% } %>
+        </ul>
+      </header>
+ 
+
+
+
